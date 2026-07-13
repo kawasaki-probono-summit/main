@@ -287,6 +287,7 @@
     <nav class="nav-links">
       <a href="#about">About</a>
       <a href="#program">Program</a>
+      <a href="#supporters">支援先団体</a>
       <a href="#method">智慧の車座</a>
       <a href="#organizers">主催</a>
       <a href="#apply">参加申込</a>
@@ -401,9 +402,101 @@
   </div>
 </section>
 
+<section class="block" id="supporters">
+  <div class="section-num">03 — SUPPORTERS</div>
+  <h2 class="section-title">支援先団体<small>当日ご参加いただく13団体（詳細は順次更新）</small></h2>
+
+  <div class="supporters-tabs">
+    <button type="button" class="active" data-tab="tab-arts">芸術・文化</button>
+    <button type="button" data-tab="tab-health">健康・医療</button>
+    <button type="button" data-tab="tab-agri">農業・食</button>
+    <button type="button" data-tab="tab-kids">子ども・教育</button>
+    <button type="button" data-tab="tab-community">まちづくり・地域コミュニティ</button>
+  </div>
+
+  <div class="supporters-panel active" id="tab-arts">
+    <div class="supporters-grid">
+      <div class="supporter-card no-link">
+        <span class="s-name">シルク・ドゥ・フィル</span><span class="s-pending">Web準備中</span>
+      </div>
+      <a class="supporter-card" href="https://www.instagram.com/shinobu_sound/" target="_blank" rel="noopener">
+        <span class="s-name">しのぶ</span><span class="s-arrow">→</span>
+      </a>
+      <a class="supporter-card" href="https://kawasaki-city.art/art-spot/3014/" target="_blank" rel="noopener">
+        <span class="s-name">waku（ワク）</span><span class="s-arrow">→</span>
+      </a>
+      <a class="supporter-card" href="https://note.com/dancensemble" target="_blank" rel="noopener">
+        <span class="s-name">ダンサンブル</span><span class="s-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="supporters-panel" id="tab-health">
+    <div class="supporters-grid">
+      <a class="supporter-card" href="https://yobomentalhealth.com/" target="_blank" rel="noopener">
+        <span class="s-name">予防メンタルヘルス機構</span><span class="s-arrow">→</span>
+      </a>
+      <a class="supporter-card" href="https://josei-yobouiryo.com/" target="_blank" rel="noopener">
+        <span class="s-name">NPO法人女性予防医療推進機構</span><span class="s-arrow">→</span>
+      </a>
+      <a class="supporter-card" href="https://www.kawa-kango.jp/" target="_blank" rel="noopener">
+        <span class="s-name">川崎市看護協会</span><span class="s-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="supporters-panel" id="tab-agri">
+    <div class="supporters-grid">
+      <div class="supporter-card no-link">
+        <span class="s-name">ベジタブルスイート</span><span class="s-pending">Web準備中</span>
+      </div>
+      <div class="supporter-card no-link">
+        <span class="s-name">永田農園</span><span class="s-pending">Web準備中</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="supporters-panel" id="tab-kids">
+    <div class="supporters-grid">
+      <a class="supporter-card" href="https://keyperson21.org/" target="_blank" rel="noopener">
+        <span class="s-name">認定NPO法人キーパーソン21</span><span class="s-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="supporters-panel" id="tab-community">
+    <div class="supporters-grid">
+      <a class="supporter-card" href="https://www.facebook.com/nakaharasdc/" target="_blank" rel="noopener">
+        <span class="s-name">中原区SDC</span><span class="s-arrow">→</span>
+      </a>
+      <div class="supporter-card no-link">
+        <span class="s-name">まちの企画室</span><span class="s-pending">Web準備中</span>
+      </div>
+      <a class="supporter-card" href="https://midori-ba.jp/" target="_blank" rel="noopener">
+        <span class="s-name">NPO法人midori-ba</span><span class="s-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <p class="supporters-note">※ カテゴリは元データを踏まえてサイト掲載用に再整理したものです。ご確認のうえ必要に応じて調整してください。</p>
+</section>
+
+<script>
+  document.querySelectorAll('.supporters-tabs button').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.supporters-tabs button').forEach(function(b){b.classList.remove('active')});
+      document.querySelectorAll('.supporters-panel').forEach(function(p){p.classList.remove('active')});
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+  });
+</script>
+
+
+
 <section class="method" id="method">
   <div class="method-inner">
-    <div class="section-num">03 — METHOD</div>
+    <div class="section-num">04 — METHOD</div>
     <h2 class="section-title">「智慧の車座」とは<small>3〜6人で問題をほぐし、知恵を出し合う対話のかたち</small></h2>
 
     <div class="method-img">
