@@ -191,6 +191,55 @@
   .step p{color:#bbb;font-size:14px}
   @media(max-width:640px){.step{grid-template-columns:1fr;gap:8px}}
 
+    /* Supporters (支援先団体) */
+  .supporters-tabs{
+    display:flex;gap:8px;flex-wrap:wrap;
+    margin-bottom:32px;
+  }
+  .supporters-tabs button{
+    font-family:inherit;font-size:13px;font-weight:700;
+    letter-spacing:.05em;
+    padding:10px 20px;border-radius:99px;
+    border:1.5px solid var(--c-line);
+    background:#fff;color:var(--c-sub);
+    cursor:pointer;transition:all .15s ease;
+  }
+  .supporters-tabs button:hover{border-color:var(--c-accent);color:var(--c-accent)}
+  .supporters-tabs button.active{
+    background:var(--c-text);border-color:var(--c-text);color:#fff;
+  }
+  .supporters-panel{display:none}
+  .supporters-panel.active{display:block}
+  .supporters-grid{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:16px;
+  }
+  @media(max-width:720px){.supporters-grid{grid-template-columns:1fr}}
+  .supporter-card{
+    display:flex;justify-content:space-between;align-items:center;gap:12px;
+    background:var(--c-card);border:1px solid var(--c-line);
+    padding:20px 24px;border-radius:12px;
+    transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  }
+  .supporter-card:hover{
+    transform:translateY(-3px);
+    border-color:var(--c-accent);
+    box-shadow:0 8px 20px rgba(232,90,44,.12);
+  }
+  .supporter-card .s-name{font-size:15px;font-weight:700}
+  .supporter-card .s-arrow{
+    font-size:14px;color:var(--c-accent);flex-shrink:0;
+    transition:transform .15s ease;
+  }
+  .supporter-card:hover .s-arrow{transform:translateX(4px)}
+  .supporter-card.no-link{cursor:default}
+  .supporter-card.no-link:hover{
+    transform:none;border-color:var(--c-line);box-shadow:none;
+  }
+  .supporter-card .s-pending{font-size:11px;color:var(--c-sub);flex-shrink:0}
+  .supporters-note{
+    margin-top:24px;font-size:13px;color:var(--c-sub);
+  }
+
   /* Workshop method */
   .method{padding:100px 24px;background:#fff8ee;margin-top:0}
   .method-inner{max-width:1100px;margin:0 auto}
